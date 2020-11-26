@@ -1,0 +1,416 @@
+@font-face {
+    font-family: 'Gotham Book';
+    src: url(../fonts/Gotham-Book.eot);
+    src: url(../fonts/Gotham-Book.eot?#iefix) format('embedded-opentype'),
+        url(../fonts/Gotham-Book.woff2) format('woff2'),
+        url(../fonts/Gotham-Book.woff) format('woff'),
+        url(../fonts/Gotham-Book.ttf) format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gotham Book';
+    src: url(../fonts/Gotham-BookItalic.eot);
+    src: url(../fonts/Gotham-BookItalic.eot?#iefix) format('embedded-opentype'),
+        url(../fonts/Gotham-BookItalic.woff2) format('woff2'),
+        url(../fonts/Gotham-BookItalic.woff) format('woff'),
+        url(../fonts/Gotham-BookItalic.ttf) format('truetype');
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Gotham';
+    src: url(../fonts/Gotham-Bold.eot);
+    src: url(../fonts/Gotham-Bold.eot?#iefix) format('embedded-opentype'),
+        url(../fonts/Gotham-Bold.woff2) format('woff2'),
+        url(../fonts/Gotham-Bold.woff) format('woff'),
+        url(../fonts/Gotham-Bold.ttf) format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Gotham Book', sans-serif;
+    color: rgb(57, 49, 60);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.light-text {
+    color: rgb(226, 219, 212);
+}
+
+.link-color {
+    color: rgb(123, 106, 134);
+}
+
+.container {
+    max-width: 1250px;
+    margin: auto;
+    width: 100%;  
+    height: auto;  
+}
+
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background: rgb(226, 219, 212);
+    display: flex;
+    z-index: 5;
+}
+
+.site-header .container {
+    width: 50%;
+}
+
+.site-header .menu-list {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.menu-list li a {
+    font-size: 18px;
+}
+
+.menu-list li a:hover {
+    color: rgb(123, 106, 134);
+    transition: all 0.3s ease 0s;
+}
+
+.icon {
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+}
+
+.toggle-menu {
+    position: absolute;
+    top: 0;
+    right: 30px;
+    height: 80px;
+    line-height: 80px;
+}
+
+.close-menu {
+    position: absolute;
+    right: 30px;
+    top: 20px;
+}
+
+section {
+    padding: 100px 50px;
+}
+
+.section-title {
+    font-family: 'Gotham', sans-serif;   
+    font-weight: bold;
+    text-align: center;
+    font-size: 60px;
+    margin-bottom: 50px;
+}
+
+section .content {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+}
+    
+.paragraph {
+    font-family: 'Gotham Book', sans-serif;
+    font-weight: 400;
+    line-height: 30px;
+    font-size: 15px;
+    text-align: justify;
+}
+
+#home {
+    background: rgb(226, 219, 212);
+    position: relative;
+    height: auto;
+    padding-top: 100px;
+}
+
+#home .container {
+    position: relative;
+    z-index: 2;
+}
+
+#home:after {
+    content: "";
+    background: fixed #e2dbd4 url(../img/home-bg.jpg) center center / cover no-repeat;  
+    display: block;
+    position: absolute;
+    left: 0; 
+    right: 0;
+    top: 0; 
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    z-index: 1;   
+    opacity: 0.2;
+}
+
+#home .section-title {
+    margin-top: 30px;
+}
+
+#home a:hover {
+    text-decoration: underline;
+}
+
+img {
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,.20);
+}
+
+#about-us {
+    background: rgb(57,49,60);
+}
+
+#about-us a {
+    width: 48%;
+}
+
+#about-us img {
+    width: 100%;
+}
+
+#about-us .paragraph {
+    width: 40%;
+    margin: auto;
+}
+
+#about-us div:nth-child(2) {
+    margin-bottom: 35px;
+}
+
+#gallery {
+    background: rgb(226, 219, 212);
+}
+
+#gallery .img-wrapper {
+    width: 32%;
+}
+
+#gallery img {
+    height: auto;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+#gallery img:hover {
+    transform: scale(1.1);
+}
+
+#gallery .img-title {
+    text-align: center;
+    font-style: italic;
+    font-size: 10px;
+}
+
+#contacts {
+    padding-bottom: 140px;
+    background: rgb(57,49,60);
+}
+
+#contacts .content {
+    flex-direction: column;
+}
+
+#mapid { 
+    margin: auto;
+    height: 400px; 
+    max-width: 650px;
+    width: 100%;
+    border-radius: 5px;
+    z-index: 1;
+}
+
+#contacts i {
+    margin-right: 5px;
+}
+
+.phone-email-wrapper {
+    display: flex;
+    max-width: 420px;
+    width: 100%;
+    justify-content: space-around;
+    margin: 20px auto auto;
+}
+
+#btnScrollTop {
+    display: none;
+    position: fixed;
+    right: 25px;
+    bottom: 60px;
+    width: 50px;
+    height: 50px;
+    background: rgba(226, 219, 212, 0.8);
+    box-shadow: 0 0 10px rgb(0 , 0, 0, .15);
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    z-index: 2;
+}
+
+#btnScrollTop:hover {
+    background: rgba(106, 89, 117, 0.8);
+    transition: all 0.3s ease 0s;
+}
+
+#btnScrollTop i {
+    font-size: 30px;
+}
+
+.site-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    background: rgb(57, 49, 60);
+}
+
+@media (max-width: 1023px) {
+    .icon {
+        display: block;
+    }
+
+    .icon.hide {
+        display: none;
+    }
+
+    .site-header .menu-list {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        height: 100vh;
+        width: 100%;
+        background: rgb(226, 219, 212);
+        display: block;
+        text-align: center;
+        padding: 150px 0;
+        transition: all 0.3s ease;
+    }
+
+    .site-header .menu-list.active {
+        left: 0%;
+    }
+
+    .site-header .menu-list li {
+        margin-bottom: 50px;
+    }
+
+    section {
+        padding: 70px 50px;
+    }
+
+    .section-title {
+        font-size: 45px;
+        margin-bottom: 40px;
+    }
+
+    section .content {
+        align-items: center;
+        justify-content: center;        
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+
+    }
+
+    #about-us .content {
+        max-width: 650px;
+        width: 100%;
+        margin: auto
+    }
+
+    #about-us a {
+        width: 100%;
+    }
+
+    #about-us img {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    
+    #about-us .paragraph {
+        width: 100%;
+    }
+
+    #about-us .flex-reverse {
+        flex-direction: column-reverse;
+    }
+
+    #gallery .img-wrapper {
+        max-width: 650px;
+        width: 100%;
+        margin-bottom: 35px;
+    }
+
+    #gallery .img-wrapper:last-child {
+        margin-bottom: 0px;
+    }
+
+    #contacts {
+        padding-bottom: 110px;
+    }
+} 
+
+@media (max-width: 767px) {
+    section {
+        padding: 30px 20px;
+    }
+
+    .section-title {
+        margin-bottom: 25px;
+    }
+
+    #home:after {
+        background: #e2dbd4 url(../img/home-bg.jpg) center center / cover no-repeat; 
+    }
+
+    #home .section-title {
+        margin-top: 0;
+    }
+
+    #contacts {
+        padding-bottom: 70px;
+    }
+
+    #mapid { 
+        margin: auto;
+        height: 250px; 
+    }
+
+    .phone-email-wrapper {
+        flex-direction: column;
+        text-align: center;
+        margin: 20px auto auto;
+        
+    }
+
+    #contacts .phone {
+        margin-bottom: 10px;
+    }
+}
